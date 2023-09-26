@@ -15,20 +15,158 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/d56c9752f2.js" crossorigin="anonymous"></script>
+
     <style>
-        .font-lato{
-            font-family: 'Lato', sans-serif;;
+        .font-lato {
+            font-family: 'Lato', sans-serif;
+            ;
         }
     </style>
 
+    <!-- Tailwind custom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fruit-bg-primary': '#F85559',
+                    }
+                }
+            }
+        }
+    </script>
 
 </head>
 
 <body class="font-lato">
-    <header>
-        
+    <header class="md:container mx-auto mb-20">
+        <!-- Navbar -->
+        <nav>
+            <div class="navbar bg-fruit-bg-primary px-16 py-6 rounded-full my-8">
+                <div class="navbar-start">
+                    <ul class="flex row gap-7">
+                        <li class="text-lg text-white font-medium"><a href="">Home</a></li>
+                        <li class="text-lg text-white font-medium"><a href="">About Us</a></li>
+                        <li class="text-lg text-white font-medium"><a href="">Shop</a></li>
+                        <li class="text-lg text-white font-medium"><a href="">All Fruits</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-center">
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="images/logo.png" alt="">
+                        <h4 class="text-[40px] text-white font-bold">Fruit Burst</h4>
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <div class="form-control">
+                        <div class="input-group">
+                            <input type="text" placeholder="Search…" class="input rounded-full" />
+                            <button class="btn bg-white border-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sliding Banner -->
+        <div class="carousel w-full rounded-2xl">
+            <div id="slide1" class="carousel-item relative w-full">
+                <div class="hero carousel-item relative w-full rounded-lg min-h-screen -z-10" style="background-image: url('images/banner1.png');">
+                    <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-md">
+                            <h1 class="mb-5 text-5xl font-bold text-white">Exotic tastes at your doorstep</h1>
+                            <p class="mb-5">We supply highly quality organic products</p>
+                            <button class="btn bg-fruit-bg-primary text-white border-0">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="hero carousel-item relative w-full rounded-lg min-h-screen -z-10" style="background-image: url('images/banner2.png');">
+                    <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-md">
+                            <h1 class="mb-5 text-5xl font-bold text-white">Good Food is here</h1>
+                            <p class="mb-5">We supply highly quality organic products</p>
+                            <button class="btn bg-fruit-bg-primary text-white border-0">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+                <div class="hero carousel-item relative w-full rounded-lg min-h-screen -z-10" style="background-image: url('images/banner3.png');">
+                    <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-md">
+                            <h1 class="mb-5 text-5xl font-bold text-white">It's finger lickin' food</h1>
+                            <p class="mb-5">We supply highly quality organic products</p>
+                            <button class="btn bg-fruit-bg-primary text-white border-0">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+                <div class="hero carousel-item relative w-full rounded-lg min-h-screen -z-10" style="background-image: url('images/banner4.png');">
+                    <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-md">
+                            <h1 class="mb-5 text-5xl font-bold text-white">Our food will fix your mood</h1>
+                            <p class="mb-5">We supply highly quality organic products</p>
+                            <button class="btn bg-fruit-bg-primary text-white border-0">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured product -->
+        <div class="flex justify-between w-4/5 mx-auto bg-white shadow-xl rounded-lg py-7 px-10 -mt-24">
+            <div class="text-center">
+                <img src="images/fruit1.png" alt="">
+                <p class="text-gray-700 text-xl mt-1">Berry</p>
+            </div>
+            <div class="text-center">
+                <img src="images/fruit2.png" alt="">
+                <p class="text-gray-700 text-xl mt-1">Orange</p>
+            </div>
+            <div class="text-center">
+                <img src="images/fruit3.png" alt="">
+                <p class="text-gray-700 text-xl mt-1">Mango</p>
+            </div>
+            <div class="text-center">
+                <img src="images/fruit4.png" alt="">
+                <p class="text-gray-700 text-xl mt-1">Strawberry</p>
+            </div>
+        </div>
+
+
     </header>
-    <main>
+    <main class="md:container mx-auto">
 
     </main>
     <footer>
